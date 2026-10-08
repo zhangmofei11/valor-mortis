@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Mortis - Complete Guide & Wiki</title>
+    <meta name="description" content="Your ultimate guide to Valor Mortis. Complete walkthrough, combat guide, boss strategies, weapons, and tips for the Napoleonic Soulslike game.">
+    <meta name="keywords" content="Valor Mortis, Valor Mortis guide, Valor Mortis wiki, Valor Mortis walkthrough, Valor Mortis boss, Soulslike game, Napoleon era game">
+    <link rel="canonical" href="https://valor-mortis.wiki/">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 300: '#FCD34D', 400: '#FBBF24', 500: '#F59E0B', 600: '#D97706' },
+                        obsidian: { 900: '#0a0a0f', 800: '#12121a', 700: '#1a1a25', 600: '#252535' },
+                        crimson: { 500: '#DC2626', 600: '#B91C1C' }
+                    },
+                    fontFamily: { 'cinzel': ['Cinzel', 'serif'], 'inter': ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { box-sizing: border-box; }
+        body { background: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0f 50%, #050508 100%); min-height: 100vh; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(18, 18, 26, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-card { background: linear-gradient(135deg, rgba(26, 26, 37, 0.9) 0%, rgba(18, 18, 26, 0.9) 100%); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-8px) scale(1.02); border-color: rgba(220, 38, 38, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 60px rgba(220, 38, 38, 0.1); }
+        .text-gradient-gold { background: linear-gradient(135deg, #FCD34D 0%, #F59E0B 50%, #D97706 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .text-gradient-crimson { background: linear-gradient(135deg, #FCA5A5 0%, #DC2626 50%, #991B1B 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .stat-card { background: linear-gradient(135deg, rgba(26, 26, 37, 0.8) 0%, rgba(18, 18, 26, 0.8) 100%); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.3), transparent); }
+        .hero-bg { background: radial-gradient(ellipse at 30% 0%, rgba(220, 38, 38, 0.08) 0%, transparent 50%), radial-gradient(ellipse at 70% 0%, rgba(245, 158, 11, 0.05) 0%, transparent 50%); }
+        .btn-primary { background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(220, 38, 38, 0.1) 100%); border: 1px solid rgba(220, 38, 38, 0.3); transition: all 0.3s ease; }
+        .btn-primary:hover { background: linear-gradient(135deg, rgba(220, 38, 38, 0.3) 0%, rgba(220, 38, 38, 0.2) 100%); border-color: rgba(220, 38, 38, 0.5); box-shadow: 0 4px 20px rgba(220, 38, 38, 0.2); }
+    </style>
+</head>
+<body class="text-gray-100 antialiased">
+    <!-- Header -->
+    <header class="glass sticky top-0 z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="/" class="flex items-center space-x-4 group">
+                    <div class="w-12 h-12 bg-gradient-to-br from-crimson-500 to-crimson-600 rounded-xl flex items-center justify-center shadow-lg shadow-crimson-500/20">
+                        <span class="font-cinzel font-bold text-white text-lg">VM</span>
+                    </div>
+                    <div>
+                        <span class="font-cinzel font-bold text-xl text-white tracking-wide">Valor Mortis</span>
+                        <span class="block text-xs text-crimson-400/70">Complete Guide</span>
+                    </div>
+                </a>
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="/" class="px-5 py-2 text-crimson-400 bg-crimson-500/10 rounded-lg border border-crimson-500/30 font-medium">Home</a>
+                    <a href="walkthrough.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Walkthrough</a>
+                    <a href="combat.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Combat</a>
+                    <a href="bosses.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Bosses</a>
+                    <a href="weapons.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Weapons</a>
+                    <a href="tips.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Tips</a>
+                </nav>
+                <button id="mobile-menu-btn" class="lg:hidden p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-obsidian-800 border-t border-white/5">
+            <div class="px-6 py-4 space-y-2">
+                <a href="/" class="block px-4 py-3 text-crimson-400 bg-crimson-500/10 rounded-lg">Home</a>
+                <a href="walkthrough.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Walkthrough</a>
+                <a href="combat.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Combat</a>
+                <a href="bosses.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Bosses</a>
+                <a href="weapons.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Weapons</a>
+                <a href="tips.html" class="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg">Tips</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg relative overflow-hidden">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-crimson-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute top-0 right-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+            <div class="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="inline-flex items-center px-4 py-2 bg-crimson-500/10 border border-crimson-500/20 rounded-full mb-8">
+                        <span class="w-2 h-2 bg-crimson-500 rounded-full mr-2 animate-pulse"></span>
+                        <span class="text-crimson-400 text-sm font-medium">Soulslike Napoleonic Action</span>
+                    </div>
+                    <h1 class="font-cinzel text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                        <span class="text-white">Valor Mortis</span>
+                        <span class="block text-gradient-crimson text-3xl md:text-4xl lg:text-5xl mt-2">Complete Edition Guide</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                        Master the brutal combat of Valor Mortis. Complete walkthroughs, boss strategies, weapon guides, and expert tips for the Napoleonic Soulslike.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 mb-16">
+                        <a href="#quick-facts" class="btn-primary px-8 py-4 text-crimson-400 font-semibold rounded-xl text-lg">Explore Guide</a>
+                        <a href="walkthrough.html" class="px-8 py-4 bg-obsidian-700 border border-white/10 text-white font-semibold rounded-xl hover:bg-obsidian-600 transition-all">View Walkthrough</a>
+                    </div>
+                    <div id="quick-facts" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                        <div class="stat-card rounded-xl p-5 text-center"><div class="text-crimson-400 font-cinzel text-2xl font-bold mb-1">12+</div><div class="text-gray-500 text-sm">Main Stages</div></div>
+                        <div class="stat-card rounded-xl p-5 text-center"><div class="text-crimson-400 font-cinzel text-2xl font-bold mb-1">8</div><div class="text-gray-500 text-sm">Boss Fights</div></div>
+                        <div class="stat-card rounded-xl p-5 text-center"><div class="text-crimson-400 font-cinzel text-2xl font-bold mb-1">20+</div><div class="text-gray-500 text-sm">Weapons</div></div>
+                        <div class="stat-card rounded-xl p-5 text-center"><div class="text-crimson-400 font-cinzel text-2xl font-bold mb-1">5</div><div class="text-gray-500 text-sm">Difficulty</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-obsidian-900 to-transparent"></div>
+        </section>
+
+        <!-- Navigation Cards -->
+        <section class="py-20 bg-obsidian-900">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-white mb-4">Explore the Guide</h2>
+                    <p class="text-gray-400 max-w-xl mx-auto">Everything you need to master Valor Mortis</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="walkthrough.html" class="card-hover glass-card rounded-2xl p-8 block relative overflow-hidden group">
+                        <div class="w-16 h-16 bg-crimson-500/20 rounded-2xl flex items-center justify-center mb-6 border border-crimson-500/20">
+                            <svg class="w-8 h-8 text-crimson-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Walkthrough</h3>
+                        <p class="text-gray-400 text-sm mb-4">Complete story walkthrough with detailed steps for all chapters and side quests.</p>
+                        <div class="flex items-center text-crimson-400 text-sm font-semibold">Start Guide <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+                    </a>
+
+                    <a href="combat.html" class="card-hover glass-card rounded-2xl p-8 block relative overflow-hidden group">
+                        <div class="w-16 h-16 bg-gold-500/20 rounded-2xl flex items-center justify-center mb-6 border border-gold-500/20">
+                            <svg class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Combat Guide</h3>
+                        <p class="text-gray-400 text-sm mb-4">Master the soulslike combat system. Parry, dodge, stance switching, and more.</p>
+                        <div class="flex items-center text-gold-400 text-sm font-semibold">Learn Combat <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+                    </a>
+
+                    <a href="bosses.html" class="card-hover glass-card rounded-2xl p-8 block relative overflow-hidden group">
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 border border-purple-500/20">
+                            <svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Boss Strategies</h3>
+                        <p class="text-gray-400 text-sm mb-4">Defeat every boss with detailed strategies, patterns, and loadout recommendations.</p>
+                        <div class="flex items-center text-purple-400 text-sm font-semibold">View Bosses <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+                    </a>
+
+                    <a href="weapons.html" class="card-hover glass-card rounded-2xl p-8 block relative overflow-hidden group">
+                        <div class="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-6 border border-emerald-500/20">
+                            <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Weapons</h3>
+                        <p class="text-gray-400 text-sm mb-4">Complete weapon list with stats, skills, upgrade paths, and best builds.</p>
+                        <div class="flex items-center text-emerald-400 text-sm font-semibold">Browse Weapons <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+                    </a>
+
+                    <a href="tips.html" class="card-hover glass-card rounded-2xl p-8 block relative overflow-hidden group">
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6 border border-blue-500/20">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Tips & Tricks</h3>
+                        <p class="text-gray-400 text-sm mb-4">Expert tips for beginners. Leveling, currency farming, and hidden secrets.</p>
+                        <div class="flex items-center text-blue-400 text-sm font-semibold">Get Tips <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></div>
+                    </a>
+
+                    <div class="glass-card rounded-2xl p-8 border border-gold-500/20">
+                        <div class="w-16 h-16 bg-gold-500/20 rounded-2xl flex items-center justify-center mb-6 border border-gold-500/20">
+                            <svg class="w-8 h-8 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-3">Release Date</h3>
+                        <p class="text-gray-400 text-sm mb-4">Coming October 2026</p>
+                        <div class="text-gold-400 font-cinzel font-bold text-2xl">October 2026</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Features -->
+        <section class="py-20 bg-obsidian-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center justify-between mb-12">
+                    <div>
+                        <h2 class="font-cinzel text-3xl md:text-4xl font-bold text-white mb-2">Game Features</h2>
+                        <p class="text-gray-400">What makes Valor Mortis unique</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-crimson-400 text-2xl mb-3">⚔️</div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Napoleonic Combat</h3>
+                        <p class="text-gray-400 text-sm">Authentic Napoleonic-era weapons and tactics. Muskets, sabers, pikes, and bayonets.</p>
+                    </div>
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-purple-400 text-2xl mb-3">💀</div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Soulslike Challenge</h3>
+                        <p class="text-gray-400 text-sm">Tough but fair combat. Learn patterns, master timing, overcome death.</p>
+                    </div>
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-gold-400 text-2xl mb-3">🎯</div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Strategic Combat</h3>
+                        <p class="text-gray-400 text-sm">Stance system, parrying, gunpowder weapons. Adapt your style to each enemy.</p>
+                    </div>
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-emerald-400 text-2xl mb-3">🏰</div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Historical Setting</h3>
+                        <p class="text-gray-400 text-sm">Experience the Napoleonic Wars era. Realistic battlefields and locations.</p>
+                    </div>
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-blue-400 text-2xl mb-3">⚡</div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Ghostrunner DNA</h3>
+                        <p class="text-gray-400 text-sm">From the creators of Ghostrunner. Fluid movement meets tactical combat.</p>
+                    </div>
+                    <div class="stat-card rounded-xl p-6">
+                        <div class="text-orange-400 text-2xl mb-3">🔥</div>
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Weapon Arts</h3>
+                        <p class="text-gray-400 text-sm">Unique weapon skills and combos. Build your perfect loadout.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-obsidian-900 border-t border-white/5 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-crimson-500 to-crimson-600 rounded-xl flex items-center justify-center"><span class="font-cinzel font-bold text-white text-lg">VM</span></div>
+                        <div><span class="font-cinzel font-bold text-xl text-white">Valor Mortis</span><span class="block text-xs text-crimson-400/70">Complete Guide</span></div>
+                    </div>
+                    <p class="text-gray-400 text-sm">Your ultimate guide to Valor Mortis. Complete walkthroughs, boss guides, and combat tips.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm"><li><a href="walkthrough.html" class="text-gray-400 hover:text-crimson-400 transition-colors">Walkthrough</a></li><li><a href="combat.html" class="text-gray-400 hover:text-crimson-400 transition-colors">Combat Guide</a></li><li><a href="bosses.html" class="text-gray-400 hover:text-crimson-400 transition-colors">Boss Strategies</a></li><li><a href="weapons.html" class="text-gray-400 hover:text-crimson-400 transition-colors">Weapons</a></li></ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Resources</h4>
+                    <ul class="space-y-3 text-sm"><li><a href="#" class="text-gray-400 hover:text-crimson-400 transition-colors">Steam Page</a></li><li><a href="#" class="text-gray-400 hover:text-crimson-400 transition-colors">Official Site</a></li><li><a href="#" class="text-gray-400 hover:text-crimson-400 transition-colors">Developer</a></li></ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm"><li><a href="#" class="text-gray-400 hover:text-crimson-400 transition-colors">Privacy Policy</a></li><li><a href="#" class="text-gray-400 hover:text-crimson-400 transition-colors">Terms of Use</a></li></ul>
+                    <p class="text-gray-600 text-xs mt-4">Not affiliated with Slipgate Ironworks.</p>
+                </div>
+            </div>
+            <div class="divider mb-8"></div>
+            <div class="text-center text-gray-500 text-sm"><p>&copy; 2026 Valor Mortis Guide. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>

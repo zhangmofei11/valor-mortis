@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combat Guide - Valor Mortis Complete Guide</title>
+    <meta name="description" content="Master Valor Mortis combat system. Learn parry, stance switching, weapon combos, and advanced techniques.">
+    <meta name="keywords" content="Valor Mortis combat, Valor Mortis combat guide, parry, stance, combos, melee combat">
+    <link rel="canonical" href="https://valor-mortis.wiki/combat.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 300: '#FCD34D', 400: '#FBBF24', 500: '#F59E0B', 600: '#D97706' },
+                        obsidian: { 900: '#0a0a0f', 800: '#12121a', 700: '#1a1a25', 600: '#252535' },
+                        crimson: { 500: '#DC2626', 600: '#B91C1C' }
+                    },
+                    fontFamily: { 'cinzel': ['Cinzel', 'serif'], 'inter': ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { box-sizing: border-box; }
+        body { background: radial-gradient(ellipse at top, #1a1a2e 0%, #0a0a0f 50%, #050508 100%); min-height: 100vh; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(18, 18, 26, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .card-hover:hover { transform: translateY(-4px); border-color: rgba(220, 38, 38, 0.3); }
+        .skill-card { background: linear-gradient(135deg, rgba(26, 26, 37, 0.9) 0%, rgba(18, 18, 26, 0.9) 100%); border: 1px solid rgba(255, 255, 255, 0.08); }
+        .difficulty-bar { height: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 3px; overflow: hidden; }
+        .difficulty-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+    </style>
+</head>
+<body class="text-gray-100 antialiased">
+    <header class="glass sticky top-0 z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <a href="/" class="flex items-center space-x-4">
+                    <div class="w-12 h-12 bg-gradient-to-br from-crimson-500 to-crimson-600 rounded-xl flex items-center justify-center shadow-lg shadow-crimson-500/20">
+                        <span class="font-cinzel font-bold text-white text-lg">VM</span>
+                    </div>
+                    <div>
+                        <span class="font-cinzel font-bold text-xl text-white tracking-wide">Valor Mortis</span>
+                        <span class="block text-xs text-crimson-400/70">Complete Guide</span>
+                    </div>
+                </a>
+                <nav class="hidden lg:flex items-center space-x-1">
+                    <a href="/" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Home</a>
+                    <a href="walkthrough.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Walkthrough</a>
+                    <a href="combat.html" class="px-5 py-2 text-crimson-400 bg-crimson-500/10 rounded-lg border border-crimson-500/30 font-medium">Combat</a>
+                    <a href="bosses.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Bosses</a>
+                    <a href="weapons.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Weapons</a>
+                    <a href="tips.html" class="px-5 py-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">Tips</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="font-cinzel text-4xl md:text-5xl font-bold text-white mb-4">Combat <span class="text-gradient-crimson">Guide</span></h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg">Master the art of Napoleonic warfare with our comprehensive combat system guide.</p>
+        </div>
+
+        <!-- Combat Stances -->
+        <section class="mb-12">
+            <h2 class="font-cinzel text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-crimson-500/20 rounded-lg flex items-center justify-center text-crimson-400 text-sm">1</span>
+                Combat Stances
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="skill-card card-hover rounded-2xl p-6 border border-white/5">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 border border-blue-500/30">
+                        <svg class="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                    </div>
+                    <h3 class="font-cinzel text-lg font-bold text-white mb-2">High Guard</h3>
+                    <p class="text-gray-400 text-sm mb-4">Aggressive stance with increased attack power. Best for pressure tactics and staggered enemies.</p>
+                    <div class="difficulty-bar"><div class="difficulty-fill bg-blue-500" style="width: 40%"></div></div>
+                    <span class="text-xs text-gray-500 mt-1 block">Difficulty: Low</span>
+                </div>
+                <div class="skill-card card-hover rounded-2xl p-6 border border-white/5">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 border border-green-500/30">
+                        <svg class="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="font-cinzel text-lg font-bold text-white mb-2">Middle Guard</h3>
+                    <p class="text-gray-400 text-sm mb-4">Balanced stance for offense and defense. Ideal for beginners and general combat.</p>
+                    <div class="difficulty-bar"><div class="difficulty-fill bg-green-500" style="width: 25%"></div></div>
+                    <span class="text-xs text-gray-500 mt-1 block">Difficulty: Easy</span>
+                </div>
+                <div class="skill-card card-hover rounded-2xl p-6 border border-white/5">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center mb-4 border border-purple-500/30">
+                        <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    </div>
+                    <h3 class="font-cinzel text-lg font-bold text-white mb-2">Low Guard</h3>
+                    <p class="text-gray-400 text-sm mb-4">Defensive stance with superior parry window. Perfect for counters and punish tactics.</p>
+                    <div class="difficulty-bar"><div class="difficulty-fill bg-purple-500" style="width: 70%"></div></div>
+                    <span class="text-xs text-gray-500 mt-1 block">Difficulty: High</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Mechanics -->
+        <section class="mb-12">
+            <h2 class="font-cinzel text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-crimson-500/20 rounded-lg flex items-center justify-center text-crimson-400 text-sm">2</span>
+                Core Mechanics
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="skill-card rounded-2xl p-6 border border-white/5">
+                    <h3 class="font-cinzel text-lg font-bold text-white mb-4">Parry System</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 bg-gold-500/20 rounded flex items-center justify-center text-gold-400 text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+                            <div><span class="text-white font-medium">Perfect Parry</span><p class="text-gray-400 text-sm">Press block 200ms before impact. Reflects damage and staggers enemy.</p></div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 bg-gold-500/20 rounded flex items-center justify-center text-gold-400 text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+                            <div><span class="text-white font-medium">Normal Block</span><p class="text-gray-400 text-sm">Hold block to reduce damage by 60%. Stamina cost varies by weapon.</p></div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 bg-gold-500/20 rounded flex items-center justify-center text-gold-400 text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+                            <div><span class="text-white font-medium">Counter Attack</span><p class="text-gray-400 text-sm">After successful parry, press heavy attack for 2x damage counter.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card rounded-2xl p-6 border border-white/5">
+                    <h3 class="font-cinzel text-lg font-bold text-white mb-4">Stance Switching</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 bg-crimson-500/20 rounded flex items-center justify-center text-crimson-400 text-xs font-bold flex-shrink-0 mt-0.5">Q</span>
+                            <div><span class="text-white font-medium">Quick Switch</span><p class="text-gray-400 text-sm">Instant stance change. Maintains momentum but no defensive bonus.</p></div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 bg-crimson-500/20 rounded flex items-center justify-center text-crimson-400 text-xs font-bold flex-shrink-0 mt-0.5">E</span>
+                            <div><span class="text-white font-medium">Power Switch</span><p class="text-gray-400 text-sm">0.5s delay but grants 15% damage boost for 3 seconds.</p></div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="w-6 h-6 bg-crimson-500/20 rounded flex items-center justify-center text-crimson-400 text-xs font-bold flex-shrink-0 mt-0.5">R</span>
+                            <div><span class="text-white font-medium">Ultimate Switch</span><p class="text-gray-400 text-sm">Fully charged switch unlocks special stance ability.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Weapon Combos -->
+        <section class="mb-12">
+            <h2 class="font-cinzel text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-crimson-500/20 rounded-lg flex items-center justify-center text-crimson-400 text-sm">3</span>
+                Basic Combos
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="skill-card rounded-xl p-4 border border-white/5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-mono rounded">LML</span>
+                        <span class="text-gray-500 text-xs">→</span>
+                        <span class="text-green-400 text-xs">Quick Slash Combo</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">3-hit combo with increasing damage. Ends with slight knockback.</p>
+                </div>
+                <div class="skill-card rounded-xl p-4 border border-white/5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-mono rounded">LMH</span>
+                        <span class="text-gray-500 text-xs">→</span>
+                        <span class="text-crimson-400 text-xs">Sweeping Strike</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Light into heavy. Final hit knocks down grounded enemies.</p>
+                </div>
+                <div class="skill-card rounded-xl p-4 border border-white/5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-mono rounded">HHL</span>
+                        <span class="text-gray-500 text-xs">→</span>
+                        <span class="text-gold-400 text-xs">Armor Pierce</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Heavy attack chain that ignores 40% of enemy armor.</p>
+                </div>
+                <div class="skill-card rounded-xl p-4 border border-white/5">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs font-mono rounded">L+R</span>
+                        <span class="text-gray-500 text-xs">→</span>
+                        <span class="text-purple-400 text-xs">Stance Burst</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Dual input unleashes weapon-specific special attack.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Techniques -->
+        <section>
+            <h2 class="font-cinzel text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <span class="w-8 h-8 bg-crimson-500/20 rounded-lg flex items-center justify-center text-crimson-400 text-sm">4</span>
+                Advanced Techniques
+            </h2>
+            <div class="skill-card rounded-2xl p-6 border border-white/5">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            Bayonet Charge
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-2">Sprint + Heavy Attack. Covers distance quickly, impales enemies on contact for bleed damage over 5 seconds.</p>
+                        <span class="text-xs px-2 py-1 bg-crimson-500/20 text-crimson-400 rounded">Stamina: High</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Flourish Parry
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-2">Perfect parry during enemy attack chain. Slows time for 1.5s allowing critical hit setup.</p>
+                        <span class="text-xs px-2 py-1 bg-purple-500/20 text-purple-400 rounded">Timing: Precise</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                            Musket Ignition
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-2">After bayonet strike, ignite enemy with flintlock spark. Explosive damage in 3m radius.</p>
+                        <span class="text-xs px-2 py-1 bg-orange-500/20 text-orange-400 rounded">Cooldown: 8s</span>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Formation Break
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-2">Target enemy group leader. Defeating them causes remaining enemies to lose coordination and attack slower.</p>
+                        <span class="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded">Tactical</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-obsidian-900 border-t border-white/5 py-12 mt-12">
+        <div class="max-w-7xl mx-auto px-6 text-center text-gray-500 text-sm">
+            <p>&copy; 2026 Valor Mortis Guide. All rights reserved. Not affiliated with Slipgate Ironworks.</p>
+        </div>
+    </footer>
+</body>
+</html>
