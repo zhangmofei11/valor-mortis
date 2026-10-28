@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://valor-mortis.wiki/sitemap.xml
+Sitemap: https://valor-mortis.site/sitemap.xml
